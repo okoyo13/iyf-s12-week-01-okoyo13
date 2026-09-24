@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us – full form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f5f7fb;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 1.5rem;
+    }
+
+    .form-container {
+      background: white;
+      border-radius: 1.5rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      padding: 2rem 2rem 2.2rem;
+      max-width: 680px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: #0b2b4a;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+    }
+
+    .form-subhead {
+      color: #4a5b6e;
+      margin-bottom: 2rem;
+      font-size: 0.98rem;
+      border-left: 4px solid #4d7cfe;
+      padding-left: 1rem;
+      background: #f0f4ff;
+      border-radius: 0 8px 8px 0;
+      padding: 0.7rem 1rem;
+    }
+
+    fieldset {
+      border: none;
+      margin-bottom: 1.75rem;
+    }
+
+    legend {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #0e2e4f;
+      padding: 0 0.5rem 0 0;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e6edf6;
+      width: 100%;
+      display: block;
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.25rem;
+    }
+
+    label {
+      font-weight: 500;
+      color: #1e344e;
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .required-star {
+      color: #d43f3f;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid #d0dae8;
+      border-radius: 12px;
+      font-size: 0.98rem;
+      font-family: inherit;
+      background: #ffffff;
+      transition: 0.2s ease;
+      color: #0c1f31;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #4d7cfe;
+      box-shadow: 0 0 0 3px rgba(77, 124, 254, 0.15);
+    }
+
+    input:invalid:not(:placeholder-shown),
+    select:invalid:not(:placeholder-shown),
+    textarea:invalid:not(:placeholder-shown) {
+      border-color: #e06b6b;
+      background-color: #fff9f9;
+    }
+
+    input:invalid:not(:placeholder-shown):focus,
+    select:invalid:not(:placeholder-shown):focus,
+    textarea:invalid:not(:placeholder-shown):focus {
+      box-shadow: 0 0 0 3px rgba(224, 107, 107, 0.2);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%233a5a7a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1.2rem;
+      padding-right: 2.5rem;
+      cursor: pointer;
+    }
+
+    /* Newsletter checkbox group */
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-top: 0.25rem;
+      margin-bottom: 1.75rem;
+      background: #fafcff;
+      padding: 1rem 1.2rem;
+      border-radius: 14px;
+      border: 1.5px solid #e2eaf3;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: 1.3rem;
+      height: 1.3rem;
+      margin-top: 0.15rem;
+      accent-color: #4d7cfe;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .checkbox-group label {
+      margin-bottom: 0;
+      font-weight: 400;
+      color: #1f3a57;
+      font-size: 0.98rem;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+
+    .checkbox-group label a {
+      color: #2b6cdf;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* helper text */
+    .hint {
+      font-size: 0.8rem;
+      color: #62748c;
+      margin-top: 0.3rem;
+      display: block;
+    }
+
+    button {
+      background: #1e4b8f;
+      color: white;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 0.9rem 1.8rem;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+      letter-spacing: 0.3px;
+      box-shadow: 0 8px 18px rgba(30, 75, 143, 0.2);
+      margin-top: 0.5rem;
+    }
+
+    button:hover {
+      background: #143a6b;
+      box-shadow: 0 10px 22px rgba(30, 75, 143, 0.3);
+      transform: translateY(-1px);
+    }
+
+    button:active {
+      transform: translateY(1px);
+      box-shadow: 0 4px 10px rgba(30, 75, 143, 0.2);
+    }
+
+    /* mobile fine-tune */
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Get in touch</h1>
+    <div class="form-subhead">
+      Fill out the form and we'll respond within 24 hours.
+    </div>
+
+    <form action="#" method="post" novalidate> <!-- novalidate used only to demonstrate custom validation; browser validation still works due to JS-free approach, but we keep required attributes for native behavior -->
+
+      <!-- ========== FIELDSET 1: Personal info ========= -->
+      <fieldset>
+        <legend>Your details</legend>
+
+        <!-- Full name (required) -->
+        <div class="form-row">
+          <label for="fullName">
+            Full name <span class="required-star" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="e.g. Rodricks Okoyo"
+            required
+            autocomplete="name"
+          />
+        </div>
+
+        <!-- Email (required, with built‑in email validation) -->
+        <div class="form-row">
+          <label for="email">
+            Email address <span class="required-star" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+            autocomplete="email"
+          />
+          <span class="hint">We'll never share your email.</span>
+        </div>
+
+        <!-- Phone (optional) -->
+        <div class="form-row">
+          <label for="phone">Phone number <span style="font-weight:400; color:#62748c;">(optional)</span></label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+254 700 000 000"
+            autocomplete="tel"
+          />
+        </div>
+      </fieldset>
+
+      <!-- ========== FIELDSET 2: Message & subject ========= -->
+      <fieldset>
+        <legend>Your message</legend>
+
+        <!-- Subject dropdown (3 options, required? set required for better UX, but spec says "dropdown select with 3 options", not explicitly required; we add required for completeness, but keep first option disabled) -->
+        <div class="form-row">
+          <label for="subject">Subject <span class="required-star" aria-hidden="true">*</span></label>
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected>— Select a topic —</option>
+            <option value="general">General inquiry</option>
+            <option value="support">Technical support</option>
+            <option value="feedback">Feedback & suggestions</option>
+          </select>
+        </div>
+
+        <!-- Message textarea (required, min 50 chars via minlength) -->
+        <div class="form-row">
+          <label for="message">
+            Message <span class="required-star" aria-hidden="true">*</span>
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Please describe your question or comment in at least 50 characters…"
+            required
+            minlength="50"
+          ></textarea>
+          <span class="hint">Minimum 50 characters. <span id="charCount">0</span> characters entered.</span>
+        </div>
+      </fieldset>
+
+      <!-- ========== Newsletter checkbox ========= -->
+      <div class="checkbox-group">
+        <input type="checkbox" id="newsletter" name="newsletter" value="yes" />
+        <label for="newsletter">
+          Subscribe to our newsletter – monthly updates, no spam. You can unsubscribe anytime.
+        </label>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit">Send message</button>
+
+    </form>
+  </div>
+
+  <!-- small script to display live character count (optional, purely cosmetic) -->
+  <script>
+    (function() {
+      const message = document.getElementById('message');
+      const charSpan = document.getElementById('charCount');
+      if (message && charSpan) {
+        const updateCount = () => {
+          const len = message.value.length;
+          charSpan.textContent = len;
+        };
+        message.addEventListener('input', updateCount);
+        updateCount(); // initial
+      }
+    })();
+  </script>
+</body>
+</html>
