@@ -49,4 +49,4 @@ e. <iframe data-product="web_widget" title="No content" role="presentation" tabi
  c. Confirm password
  d. Accept terms and conditions.
 
-3.
+3.[Betika Registration Form] (Screenshot (1).png)
