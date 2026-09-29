@@ -22,6 +22,7 @@
 ## Website 2.https://developer.mozilla.org
 
 1.navigation is wrapped in the header tag.
+
 2.form -> label -> input ->button.
 
 3.We have some color changes after hovering.
@@ -53,4 +54,4 @@
  - Confirm password
  - Accept terms and conditions.
 
-3.[Betika Registration Form] (Screenshot (1).png)
+3.[Betika Registration Form] (Betika-screenshot.png)
