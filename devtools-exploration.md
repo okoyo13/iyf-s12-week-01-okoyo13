@@ -1,30 +1,19 @@
 ## Website 1.https://example.com
 
-a.HTML tags used in https://example.com are:-
+1.HTML tags used in https://example.com are:-
 - html
-- <html></html>
-- Item two
-  - Nested item
-- Item three
-- <html></html>
-- <head></head>
-- <body></body>
-- gfg
-- fggf
-- 
-  - <html></html>
-  - <head></head>
-  - <body></body>
+- head
+- body
+- header
+- div
+- article
+- main
+- ol
+- h1
+- nav
+- footer
+- script
 
- d. <header></header>
- e. <div></div>
- f. <article></article>
- g. <main></main>
- h. <ol></ol>
- i. <h1></h1>
- j. <nav></nav>
- k. <footer></footer>
- l. <script></script>
 
 2.The page title is Example Domains.
 
@@ -38,10 +27,11 @@ a.HTML tags used in https://example.com are:-
 
 ## Website 3.https://betika.com
 1.
- a. <title>Betika | Best Online Sports Betting &amp; Casino in Kenya</title>
- b. <div style="font-family: &quot;Google Sans&quot;; font-weight: 700; position: absolute; left: -9999px;">a</div>
- c. <script async="" src="https://scripts.clarity.ms/0.8.70/clarity.js"></script>
- d. <style>
+- <title>Betika | Best Online Sports Betting &amp; Casino in Kenya</title>
+
+- <div style="font-family: &quot;Google Sans&quot;; font-weight: 700; position: absolute; left: -9999px;">a</div>
+- <script async="" src="https://scripts.clarity.ms/0.8.70/clarity.js"></script>
+- <style>
     .portal-target {
       pointer-events: none;
       position: relative;
@@ -53,7 +43,7 @@ a.HTML tags used in https://example.com are:-
     }
   </style>
 
-e. <iframe data-product="web_widget" title="No content" role="presentation" tabindex="-1" allow="microphone *" aria-hidden="true" src="about:blank" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe>
+- <iframe data-product="web_widget" title="No content" role="presentation" tabindex="-1" allow="microphone *" aria-hidden="true" src="about:blank" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe>
 
 2.Registration form inputs:-
  a. Enter phone number.
