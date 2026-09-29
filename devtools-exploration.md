@@ -26,7 +26,8 @@
 3.We have some color changes after hovering
 
 ## Website 3.https://betika.com
-1.
+1.Five different Elements:-
+
 - <title>Betika | Best Online Sports Betting &amp; Casino in Kenya</title>
 
 - <div style="font-family: &quot;Google Sans&quot;; font-weight: 700; position: absolute; left: -9999px;">a</div>
@@ -46,9 +47,9 @@
 - <iframe data-product="web_widget" title="No content" role="presentation" tabindex="-1" allow="microphone *" aria-hidden="true" src="about:blank" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe>
 
 2.Registration form inputs:-
- a. Enter phone number.
- b. Enter password 
- c. Confirm password
- d. Accept terms and conditions.
+ - Enter phone number.
+ -  Enter password 
+ - Confirm password
+ - Accept terms and conditions.
 
 3.[Betika Registration Form] (Screenshot (1).png)
