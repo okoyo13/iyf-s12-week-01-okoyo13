@@ -1,9 +1,10 @@
 ## Website 1.https://example.com
 
-1.HTML tags used in https://example.com are:- 
- a. <html></html>
- b. <head></head>
- c. <body></body>
+a.HTML tags used in https://example.com are:- 
+  - <html></html>
+  - <head></head>
+  - <body></body>
+
  d. <header></header>
  e. <div></div>
  f. <article></article>
