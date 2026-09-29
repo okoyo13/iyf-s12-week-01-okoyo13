@@ -1,10 +1,9 @@
 ## Website 1.https://example.com
 
 a.HTML tags used in https://example.com are:-
-- Item one
-- Item two
-  - Nested item
-- Item three
+- <html></html>
+- <head></head>
+- <body></body>
 - gfg
 - fggf
 - 
