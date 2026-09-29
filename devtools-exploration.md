@@ -17,14 +17,14 @@
 
 2.The page title is Example Domains.
 
-3.There is only one heading <h1></h1>
+3.There is only one heading (h1)
 
 ## Website 2.https://developer.mozilla.org
 
-1.navigation is wrapped in the header tag,<header></header>
-2.form -> label -> input ->button
+1.navigation is wrapped in the header tag.
+2.form -> label -> input ->button.
 
-3.We have some color changes after hovering
+3.We have some color changes after hovering.
 
 ## Website 3.https://betika.com
 1.Five different Elements:-
@@ -49,7 +49,7 @@
 
 2.Registration form inputs:-
  - Enter phone number.
- -  Enter password 
+ - Enter password 
  - Confirm password
  - Accept terms and conditions.
 
