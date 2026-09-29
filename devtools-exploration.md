@@ -30,7 +30,7 @@
 
 - <title>Betika | Best Online Sports Betting &amp; Casino in Kenya</title>
 
-- <div style="font-family: &quot;Google Sans&quot;; font-weight: 700; position: absolute; left: -9999px;">a</div><script async="true" src="https://tr.snapchat.com/config/com/912b13bb-50b2-4dd0-88b0-81f12ac5cc48.js?v=3.60.0-2608111919" crossorigin="anonymous"></script>
+- <script async="true" src="https://tr.snapchat.com/config/com/912b13bb-50b2-4dd0-88b0-81f12ac5cc48.js?v=3.60.0-2608111919" crossorigin="anonymous"></script>
 - <script async="" src="https://scripts.clarity.ms/0.8.70/clarity.js"></script>
 - <style>
     .portal-target {
