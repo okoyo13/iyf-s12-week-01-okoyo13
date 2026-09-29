@@ -2,6 +2,7 @@
 
 a.HTML tags used in https://example.com are:-
 - html
+- <html></html>
 - Item two
   - Nested item
 - Item three
