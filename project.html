@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — okoyo13</title>
+    <meta name="description" content="Explore projects built by Rodricks Okoyo — portfolio website, accessible contact form, blog layout, and more.">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #fafafa;
+        }
+
+        header {
+            background: #1f2937;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .logo { font-weight: 700; font-size: 1.25rem; color: #fff; text-decoration: none; }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #e5e7eb;
+            text-decoration: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        nav a:hover, nav a:focus { background: #374151; color: #fff; }
+        nav a[aria-current="page"] { background: #2563eb; color: #fff; }
+
+        main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+        section { margin-bottom: 3rem; }
+        h1 { font-size: 2.25rem; margin-bottom: 0.5rem; }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 0.25rem;
+        }
+        h3 { font-size: 1.15rem; margin: 1rem 0 0.5rem; }
+        p { margin-bottom: 0.75rem; }
+        a { color: #2563eb; }
+
+        /* ---------- Projects grid ---------- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        .project-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .project-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: #1f2937;
+            color: #d1d5db;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">okoyo13</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" aria-current="page">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Projects</h1>
+        <p>A selection of things I've built while learning and working.</p>
+
+        <section>
+            <h2>Recent work</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <img src="images/project-1.png" alt="Screenshot of the Portfolio Website project">
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive personal portfolio built with semantic HTML and CSS Grid.</p>
+                </article>
+
+                <article class="project-card">
+                    <img src="images/project-2.png" alt="Screenshot of the Accessible Contact Form project">
+                    <h3>Accessible Contact Form</h3>
+                    <p>A form with proper labels, fieldsets, and HTML5 validation.</p>
+                </article>
+
+                <article class="project-card">
+                    <img src="images/project-3.png" alt="Screenshot of the Blog Layout project">
+                    <h3>Blog Layout</h3>
+                    <p>A clean article layout using landmarks and heading hierarchy.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 okoyo13. All rights reserved.</p>
+    </footer>
+</body>
+</html>
