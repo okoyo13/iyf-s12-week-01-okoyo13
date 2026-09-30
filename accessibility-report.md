@@ -11,10 +11,11 @@
 ## Final Lighthouse Accessibility Score
 
 **Score**: 
-- Performance 100 / 100
+- Performance 97 / 100
 - Accessibility 100/100
 - Best Practices 100/100
 - SEO 100/100
+- Agentic browsing 2/2
 
 Audited on: [30/09/2026] 
 
