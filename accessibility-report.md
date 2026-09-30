@@ -1,4 +1,5 @@
 |## Issues Found.|## How to fix them.|
+|-----------------|-------------------|
 |- Missing `Alt` attribute on images.|-Add descriptive alt text|
 |- Missing `lang` Attribute|-Add missing `lang` attribute due tomultilingual content|
 |- Broken Heading Hierarchy.|-Use headings in order not to skip a level|
