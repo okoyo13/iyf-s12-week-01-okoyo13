@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — okoyo13</title>
+    <meta name="description" content="Learn about Rodricks Okoyo's background, skills, and experience as a full-stack web developer based in Nairobi, Kenya.">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #fafafa;
+        }
+
+        header {
+            background: #1f2937;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .logo { font-weight: 700; font-size: 1.25rem; color: #fff; text-decoration: none; }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #e5e7eb;
+            text-decoration: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        nav a:hover, nav a:focus { background: #374151; color: #fff; }
+        nav a[aria-current="page"] { background: #2563eb; color: #fff; }
+
+        main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+        section { margin-bottom: 3rem; }
+        h1 { font-size: 2.25rem; margin-bottom: 0.5rem; }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 0.25rem;
+        }
+        h3 { font-size: 1.15rem; margin: 1rem 0 0.5rem; }
+        p { margin-bottom: 0.75rem; }
+        ul, ol { margin-left: 1.5rem; margin-bottom: 0.75rem; }
+        li { margin-bottom: 0.75rem; }
+        a { color: #2563eb; }
+
+        footer {
+            background: #1f2937;
+            color: #d1d5db;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">okoyo13</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>About me</h1>
+        <p>💻 Web Developer | 🤖 AI Enthusiast | 📊 Data Analyst</p>
+
+        <!-- ============ STORY ============ -->
+        <section>
+            <h2>My story</h2>
+            <p>
+                I developed an interest in computers since childhood, thanks
+                to an old computer we used to own — and I never outgrew it.
+                That habit became a career: HTML in high school, JavaScript
+                and Python at university, then six-plus years building
+                software at startups and mid-sized companies.
+            </p>
+            <p>
+                I work on design systems, scale APIs, and mentor juniors.
+                I care a lot about the details that make a product feel
+                right — clean code, accessible interfaces, thoughtful polish.
+                I'm in Nairobi, Kenya, and open to remote-friendly work.
+            </p>
+        </section>
+
+        <!-- ============ SKILLS ============ -->
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>React &amp; Next.js</strong> — Advanced · 5 yrs</li>
+                <li><strong>JavaScript / TypeScript</strong> — Advanced · 6 yrs</li>
+                <li><strong>Python &amp; Django</strong> — Intermediate · 4 yrs</li>
+                <li><strong>HTML5 &amp; CSS3</strong> — Expert · 7 yrs</li>
+            </ul>
+        </section>
+
+        <!-- ============ EDUCATION / EXPERIENCE ============ -->
+        <section>
+            <h2>Education &amp; experience</h2>
+            <ol>
+                <li>
+                    <strong>2024 — Present</strong><br>
+                    <strong>Full-Stack Developer</strong><br>
+                    Brightpath Software · Remote<br>
+                    Built and shipped customer-facing dashboards with React
+                    and Django. Introduced automated testing that reduced
+                    regressions by 60%.
+                </li>
+                <li>
+                    <strong>2020 — 2024</strong><br>
+                    <strong>Junior Web Developer</strong><br>
+                    Pixel &amp; Co. Agency · Portland, OR<br>
+                    Delivered responsive marketing sites for 20+ clients.
+                    Focused on CSS architecture, accessibility, and
+                    cross-browser compatibility.
+                </li>
+                <li>
+                    <strong>2015 — 2019</strong><br>
+                    <strong>B.Sc. in Computer Science</strong><br>
+                    Kenyatta University<br>
+                    Graduated cum laude. Specialized in human-computer
+                    interaction and web technologies. Senior capstone:
+                    accessible e-learning platform.
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 okoyo13. All rights reserved.</p>
+    </footer>
+</body>
+</html>
