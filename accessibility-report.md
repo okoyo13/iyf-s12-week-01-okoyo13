@@ -13,8 +13,8 @@
 **Score**: 
 - Performance 100 / 100
 - Accessibility 100/100
-- Best Practices 96/100
-- SEO 91/100
+- Best Practices 100/100
+- SEO 100/100
 
 Audited on: [30/09/2026] 
 
