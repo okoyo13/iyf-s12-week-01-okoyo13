@@ -1,4 +1,4 @@
-| # Issues Found.|# How to fix them.|
+|  *Issues Found.*|*How to fix them.*|
 |-----------------|-------------------|
 |- Missing `Alt` attribute on images.|-Add descriptive alt text|
 |- Missing `lang` Attribute|-Add missing `lang` attribute due tomultilingual content|
@@ -16,6 +16,8 @@
 - Best Practices 96/100
 - SEO 91/100
 
-Audited on: [30/09/2026]
-Tool: Chrome DevTools Lighthouse (Mobile, Accessibility only)
+Audited on: [30/09/2026] 
+
+Tool: Chrome DevTools Lighthouse (Mobile, Accessibility only) 
+
 Page audited: index.html
