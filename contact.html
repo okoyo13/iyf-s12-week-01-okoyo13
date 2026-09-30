@@ -8,106 +8,156 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
+
         body {
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
             color: #222;
             background: #fafafa;
+            overflow-x: hidden;
         }
 
         header {
             background: #1f2937;
             color: #fff;
-            padding: 1rem 2rem;
+            padding: 0.9rem clamp(1rem, 4vw, 2rem);
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.75rem;
             position: sticky;
             top: 0;
             z-index: 10;
         }
-        .logo { font-weight: 700; font-size: 1.25rem; color: #fff; text-decoration: none; }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
-            gap: 1.25rem;
+            gap: clamp(0.5rem, 2vw, 1.25rem);
             flex-wrap: wrap;
         }
+
         nav a {
             color: #e5e7eb;
             text-decoration: none;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
+            padding: 0.35rem 0.7rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            transition: background 0.15s;
         }
-        nav a:hover, nav a:focus { background: #374151; color: #fff; }
+
+        nav a:hover,
+        nav a:focus { background: #374151; color: #fff; }
         nav a[aria-current="page"] { background: #2563eb; color: #fff; }
 
-        main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
-        section { margin-bottom: 3rem; }
-        h1 { font-size: 2.25rem; margin-bottom: 0.5rem; }
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 3vw, 2rem);
+        }
+
+        section { margin-bottom: clamp(2rem, 4vw, 3rem); }
+
+        h1 {
+            font-size: clamp(1.75rem, 4vw + 1rem, 2.75rem);
+            line-height: 1.15;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
         h2 {
-            font-size: 1.5rem;
+            font-size: clamp(1.25rem, 2vw + 0.5rem, 1.6rem);
             margin-bottom: 1rem;
             border-bottom: 2px solid #2563eb;
-            padding-bottom: 0.25rem;
+            padding-bottom: 0.35rem;
         }
-        h3 { font-size: 1.15rem; margin: 1rem 0 0.5rem; }
+
+        h3 {
+            font-size: clamp(1rem, 1vw + 0.75rem, 1.15rem);
+            margin: 1rem 0 0.5rem;
+        }
+
         p { margin-bottom: 0.75rem; }
         a { color: #2563eb; }
 
-        /* ---------- Contact Form ---------- */
+        /* ---------- Contact form ---------- */
         fieldset {
             border: 1px solid #d1d5db;
-            border-radius: 8px;
+            border-radius: 10px;
             padding: 1rem 1.25rem;
             margin-bottom: 1.25rem;
             background: #fff;
         }
-        legend { font-weight: 600; padding: 0 0.5rem; color: #1f2937; }
+
+        legend {
+            font-weight: 600;
+            padding: 0 0.5rem;
+            color: #1f2937;
+        }
+
         label {
             display: block;
             margin-top: 0.75rem;
             margin-bottom: 0.25rem;
             font-weight: 500;
+            font-size: 0.95rem;
         }
+
         input[type="text"],
         input[type="email"],
         input[type="tel"],
         select,
         textarea {
             width: 100%;
-            padding: 0.55rem 0.75rem;
+            padding: 0.6rem 0.75rem;
             border: 1px solid #d1d5db;
             border-radius: 6px;
             font: inherit;
             background: #fff;
         }
+
         textarea { resize: vertical; min-height: 120px; }
-        input:focus, select:focus, textarea:focus {
+
+        input:focus,
+        select:focus,
+        textarea:focus {
             outline: 3px solid #93c5fd;
             outline-offset: 1px;
             border-color: #2563eb;
         }
+
         .checkbox-row {
             display: flex;
             align-items: center;
             gap: 0.5rem;
             margin-top: 1rem;
         }
+
         .checkbox-row label { margin: 0; font-weight: 400; }
+
         button {
             background: #2563eb;
             color: #fff;
             border: none;
-            padding: 0.7rem 1.4rem;
+            padding: 0.75rem 1.6rem;
             border-radius: 6px;
             font-size: 1rem;
             cursor: pointer;
             margin-top: 1rem;
+            transition: background 0.15s;
         }
-        button:hover, button:focus { background: #1d4ed8; }
+
+        button:hover,
+        button:focus { background: #1d4ed8; }
 
         /* ---------- Social + Location ---------- */
         .social-location {
@@ -116,38 +166,58 @@
             gap: 2rem;
             margin-top: 2rem;
         }
-        .social-block, .location-block { flex: 1 1 220px; }
+
+        .social-block,
+        .location-block { flex: 1 1 260px; }
+
         .social-icons {
             display: flex;
             gap: 0.75rem;
             margin-top: 0.5rem;
         }
+
         .social-link {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             background: #1f2937;
             color: #fff;
-            transition: background 0.2s;
+            transition: background 0.2s, transform 0.15s;
         }
-        .social-link:hover, .social-link:focus { background: #2563eb; }
+
+        .social-link:hover,
+        .social-link:focus {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
         .social-link svg {
             width: 20px;
             height: 20px;
             fill: currentColor;
         }
-        .location-details { margin-top: 0.5rem; }
+
+        .location-details { margin-top: 0.5rem; font-size: 0.95rem; }
+        .location-details > div { margin-bottom: 0.5rem; }
         .label { font-weight: 600; }
 
         footer {
             background: #1f2937;
             color: #d1d5db;
             text-align: center;
-            padding: 1.5rem;
-            margin-top: 3rem;
+            padding: 1.5rem clamp(1rem, 3vw, 2rem);
+            margin-top: clamp(2rem, 5vw, 4rem);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 480px) {
+            header { padding: 0.75rem 1rem; }
+            nav ul { gap: 0.25rem; }
+            nav a { padding: 0.3rem 0.55rem; font-size: 0.9rem; }
+            fieldset { padding: 0.85rem 1rem; }
         }
     </style>
 </head>
@@ -165,96 +235,66 @@
     </header>
 
     <main>
-        <h1>Contact</h1>
-        <p>Have a question, project request, or feedback? Fill out the form below.</p>
+        <section>
+            <h1>Contact</h1>
+            <p>Have a question, project request, or feedback? Fill out the form below.</p>
+        </section>
 
-        <form action="#" method="post">
-            <fieldset>
-                <legend>Your information</legend>
+        <section>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Your information</legend>
 
-                <label for="name">Full name <span aria-hidden="true">*</span></label>
-                <input type="text" id="name" name="name"
-                       placeholder="Rodricks Okoyo" autocomplete="name" required>
+                    <label for="name">Full name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Rodricks Okoyo" autocomplete="name" required>
 
-                <label for="email">Email <span aria-hidden="true">*</span></label>
-                <input type="email" id="email" name="email"
-                       placeholder="your.email@example.com" autocomplete="email" required>
+                    <label for="email">Email <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email"
+                           placeholder="your.email@example.com" autocomplete="email" required>
 
-                <label for="phone">Phone (optional)</label>
-                <input type="tel" id="phone" name="phone"
-                       placeholder="+254 700 000 000" autocomplete="tel">
-            </fieldset>
+                    <label for="phone">Phone (optional)</label>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="+254 700 000 000" autocomplete="tel">
+                </fieldset>
 
-            <fieldset>
-                <legend>Your message</legend>
+                <fieldset>
+                    <legend>Your message</legend>
 
-                <label for="subject">Subject</label>
-                <select id="subject" name="subject">
-                    <option value="general">General inquiry</option>
-                    <option value="project">Project request</option>
-                    <option value="feedback">Feedback</option>
-                </select>
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="general">General inquiry</option>
+                        <option value="project">Project request</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
 
-                <label for="message">Message <span aria-hidden="true">*</span> (min 50 characters)</label>
-                <textarea id="message" name="message" minlength="50"
-                          placeholder="Tell me what's on your mind… (at least 50 characters)"
-                          required></textarea>
+                    <label for="message">Message <span aria-hidden="true">*</span> (min 50 characters)</label>
+                    <textarea id="message" name="message" minlength="50"
+                              placeholder="Tell me what's on your mind… (at least 50 characters)"
+                              required></textarea>
 
-                <div class="checkbox-row">
-                    <input type="checkbox" id="newsletter" name="newsletter">
-                    <label for="newsletter">Subscribe to my newsletter</label>
-                </div>
-            </fieldset>
-
-            <button type="submit">Submit</button>
-        </form>
-
-        <!-- Social + Location -->
-        <div class="social-location">
-            <div class="social-block">
-                <h3>Follow me</h3>
-                <div class="social-icons">
-                    <a href="https://linkedin.com/in/rodricks-okoyo-218960255/"
-                       class="social-link" aria-label="LinkedIn" title="LinkedIn">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </a>
-                    <a href="https://github.com/okoyo13"
-                       class="social-link" aria-label="GitHub" title="GitHub">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="location-block">
-                <h3>Location &amp; timezone</h3>
-                <div class="location-details">
-                    <div>
-                        <span class="label">📍 Location:</span> Nairobi, Kenya
+                    <div class="checkbox-row">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to my newsletter</label>
                     </div>
-                    <div style="margin-top: 0.6rem;">
-                        <span class="label">🕒 Timezone:</span>
-                        <span class="timezone">UTC/GMT +3</span>
-                    </div>
-                    <div style="margin-top: 0.5rem; font-size: 0.9rem;">
-                        <span class="label">📞 Phone:</span>
-                        <a href="tel:+254795513310">+254 795 513 310</a>
-                    </div>
-                    <div style="margin-top: 0.5rem; font-size: 0.9rem;">
-                        <span class="label">✉️ Email:</span>
-                        <a href="mailto:okoyorodricks@gmail.com">okoyorodricks@gmail.com</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    </main>
+                </fieldset>
 
-    <footer>
-        <p>© 2026 okoyo13. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+                <button type="submit">Submit</button>
+            </form>
+
+            <div class="social-location">
+                <div class="social-block">
+                    <h2>Follow me</h2>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/rodricks-okoyo-218960255/"
+                           class="social-link" aria-label="LinkedIn" title="LinkedIn"
+                           target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/okoyo13"
+                           class="social-link" aria-label="GitHub" title="GitHub"
+                           target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1
