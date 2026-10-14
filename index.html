@@ -201,17 +201,27 @@
         font-size: 0.9rem;
       }
 
+      @media (max-width: 768px) {
+        header {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        nav ul {
+          gap: 0.25rem;
+        }
+      }
+
       @media (max-width: 480px) {
         header {
           padding: 0.75rem 1rem;
         }
-        nav ul {
-          gap: 0.25rem;
-        }
+
         nav a {
           padding: 0.3rem 0.55rem;
           font-size: 0.9rem;
         }
+
         .quick-links a {
           padding: 1rem;
         }
