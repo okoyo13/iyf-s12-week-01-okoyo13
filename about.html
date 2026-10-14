@@ -1,199 +1,238 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About — Rodricks Okoyo</title>
-    <meta name="description" content="Learn about Rodricks Okoyo's background, skills, and experience as a full-stack web developer based in Nairobi, Kenya.">
+    <meta
+      name="description"
+      content="Learn about Rodricks Okoyo's background, skills, and experience as a full-stack web developer based in Nairobi, Kenya."
+    />
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
 
-        body {
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            color: #222;
-            background: #fafafa;
-            overflow-x: hidden;
-        }
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        line-height: 1.6;
+        color: #222;
+        background: #fafafa;
+        overflow-x: hidden;
+      }
 
+      header {
+        background: #1f2937;
+        color: #fff;
+        padding: 0.9rem clamp(1rem, 4vw, 2rem);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 1.15rem;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: -0.01em;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: clamp(0.5rem, 2vw, 1.25rem);
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: #e5e7eb;
+        text-decoration: none;
+        padding: 0.35rem 0.7rem;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        transition: background 0.15s;
+      }
+
+      nav a:hover,
+      nav a:focus {
+        background: #374151;
+        color: #fff;
+      }
+      nav a[aria-current="page"] {
+        background: #2563eb;
+        color: #fff;
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 3vw, 2rem);
+      }
+
+      section {
+        margin-bottom: clamp(2rem, 4vw, 3rem);
+      }
+
+      h1 {
+        font-size: clamp(1.75rem, 4vw + 1rem, 2.75rem);
+        line-height: 1.15;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.02em;
+      }
+
+      h2 {
+        font-size: clamp(1.25rem, 2vw + 0.5rem, 1.6rem);
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #2563eb;
+        padding-bottom: 0.35rem;
+      }
+
+      h3 {
+        font-size: clamp(1rem, 1vw + 0.75rem, 1.15rem);
+        margin: 1rem 0 0.5rem;
+      }
+
+      p {
+        margin-bottom: 0.75rem;
+      }
+      ul,
+      ol {
+        margin-left: 1.5rem;
+        margin-bottom: 0.75rem;
+      }
+      li {
+        margin-bottom: 0.75rem;
+      }
+      a {
+        color: #2563eb;
+      }
+
+      /* Timeline list styling */
+      #timeline ol {
+        padding-left: 0;
+        margin-left: 1.5rem;
+      }
+      #timeline li {
+        padding-left: 0.5rem;
+        border-left: 3px solid #2563eb;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.25rem;
+        list-style-position: inside;
+      }
+
+      footer {
+        background: #1f2937;
+        color: #d1d5db;
+        text-align: center;
+        padding: 1.5rem clamp(1rem, 3vw, 2rem);
+        margin-top: clamp(2rem, 5vw, 4rem);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 480px) {
         header {
-            background: #1f2937;
-            color: #fff;
-            padding: 0.9rem clamp(1rem, 4vw, 2rem);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            position: sticky;
-            top: 0;
-            z-index: 10;
+          padding: 0.75rem 1rem;
         }
-
-        .logo {
-            font-weight: 700;
-            font-size: 1.15rem;
-            color: #fff;
-            text-decoration: none;
-            letter-spacing: -0.01em;
-        }
-
         nav ul {
-            list-style: none;
-            display: flex;
-            gap: clamp(0.5rem, 2vw, 1.25rem);
-            flex-wrap: wrap;
+          gap: 0.25rem;
         }
-
         nav a {
-            color: #e5e7eb;
-            text-decoration: none;
-            padding: 0.35rem 0.7rem;
-            border-radius: 6px;
-            font-size: 0.95rem;
-            transition: background 0.15s;
+          padding: 0.3rem 0.55rem;
+          font-size: 0.9rem;
         }
-
-        nav a:hover,
-        nav a:focus { background: #374151; color: #fff; }
-        nav a[aria-current="page"] { background: #2563eb; color: #fff; }
-
-        main {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 3vw, 2rem);
-        }
-
-        section { margin-bottom: clamp(2rem, 4vw, 3rem); }
-
-        h1 {
-            font-size: clamp(1.75rem, 4vw + 1rem, 2.75rem);
-            line-height: 1.15;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        h2 {
-            font-size: clamp(1.25rem, 2vw + 0.5rem, 1.6rem);
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #2563eb;
-            padding-bottom: 0.35rem;
-        }
-
-        h3 {
-            font-size: clamp(1rem, 1vw + 0.75rem, 1.15rem);
-            margin: 1rem 0 0.5rem;
-        }
-
-        p { margin-bottom: 0.75rem; }
-        ul, ol { margin-left: 1.5rem; margin-bottom: 0.75rem; }
-        li { margin-bottom: 0.75rem; }
-        a { color: #2563eb; }
-
-        /* Timeline list styling */
-        #timeline ol { padding-left: 0; margin-left: 1.5rem; }
-        #timeline li {
-            padding-left: 0.5rem;
-            border-left: 3px solid #2563eb;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.25rem;
-            list-style-position: inside;
-        }
-
-        footer {
-            background: #1f2937;
-            color: #d1d5db;
-            text-align: center;
-            padding: 1.5rem clamp(1rem, 3vw, 2rem);
-            margin-top: clamp(2rem, 5vw, 4rem);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 480px) {
-            header { padding: 0.75rem 1rem; }
-            nav ul { gap: 0.25rem; }
-            nav a { padding: 0.3rem 0.55rem; font-size: 0.9rem; }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <a href="index.html" class="logo">okoyo13</a>
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" aria-current="page">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <a href="index.html" class="logo">okoyo13</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section>
-            <h1>About me</h1>
-        </section>
+      <section>
+        <h1>About Me</h1>
+        <p>Get to know my background, skills, and experience.</p>
+      </section>
 
-        <section>
-            <p>
-                I developed an interest in computers since childhood, thanks
-                to an old computer we used to own — and I never outgrew it.
-                That habit became a career: HTML in high school, JavaScript
-                and Python at university, then two-plus years building
-                software at startups and mid-sized companies.
-            </p>
-            <p>
-                I work on design systems, scale APIs, and mentor juniors.
-                I care a lot about the details that make a product feel
-                right — clean code, accessible interfaces, thoughtful polish.
-                I'm in Nairobi, Kenya, and open to remote-friendly work.
-            </p>
-        </section>
+      <section>
+        <p>
+          I developed an interest in computers since childhood, thanks to an old
+          computer we used to own — and I never outgrew it. That habit became a
+          career: HTML in high school, JavaScript and Python at university, then
+          two-plus years building software at startups and mid-sized companies.
+        </p>
+        <p>
+          I work on design systems, scale APIs, and mentor juniors. I care a lot
+          about the details that make a product feel right — clean code,
+          accessible interfaces, thoughtful polish. I'm in Nairobi, Kenya, and
+          open to remote-friendly work.
+        </p>
+      </section>
 
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>React &amp; Next.js</strong> — Advanced · 2 yrs</li>
-                <li><strong>JavaScript / TypeScript</strong> — Advanced · 2 yrs</li>
-                <li><strong>Python &amp; Django</strong> — Intermediate · 2 yrs</li>
-                <li><strong>HTML5 &amp; CSS3</strong> — Expert · 3 yrs</li>
-            </ul>
-        </section>
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          <li><strong>React &amp; Next.js</strong> — Advanced · 2 yrs</li>
+          <li><strong>JavaScript / TypeScript</strong> — Advanced · 2 yrs</li>
+          <li><strong>Python &amp; Django</strong> — Intermediate · 2 yrs</li>
+          <li><strong>HTML5 &amp; CSS3</strong> — Expert · 3 yrs</li>
+        </ul>
+      </section>
 
-        <section id="timeline">
-            <h2>Education &amp; experience</h2>
-            <ol>
-                <li>
-                    <strong>2024 — Present</strong><br>
-                    <strong>Full-Stack Developer</strong><br>
-                    Brightpath Software · Remote<br>
-                    Built and shipped customer-facing dashboards with React
-                    and Django. Introduced automated testing that reduced
-                    regressions by 60%.
-                </li>
-                <li>
-                    <strong>2022 — 2024</strong><br>
-                    <strong>Junior Web Developer</strong><br>
-                    Pixel &amp; Co. Agency · Westlands, Nairobi<br>
-                    Delivered responsive marketing sites for 20+ clients.
-                    Focused on CSS architecture, accessibility, and
-                    cross-browser compatibility.
-                </li>
-                <li>
-                    <strong>2019 — 2022</strong><br>
-                    <strong>B.Sc. in Computer Science</strong><br>
-                    Kenyatta University<br>
-                    Graduated cum laude. Specialized in human-computer
-                    interaction and web technologies. Senior capstone:
-                    accessible e-learning platform.
-                </li>
-            </ol>
-        </section>
+      <section id="timeline">
+        <h2>Education &amp; experience</h2>
+        <ol>
+          <li>
+            <strong>2024 — Present</strong><br />
+            <strong>Full-Stack Developer</strong><br />
+            Brightpath Software · Remote<br />
+            Built and shipped customer-facing dashboards with React and Django.
+            Introduced automated testing that reduced regressions by 60%.
+          </li>
+          <li>
+            <strong>2022 — 2024</strong><br />
+            <strong>Junior Web Developer</strong><br />
+            Pixel &amp; Co. Agency · Westlands, Nairobi<br />
+            Delivered responsive marketing sites for 20+ clients. Focused on CSS
+            architecture, accessibility, and cross-browser compatibility.
+          </li>
+          <li>
+            <strong>2019 — 2022</strong><br />
+            <strong>B.Sc. in Computer Science</strong><br />
+            Kenyatta University<br />
+            Graduated cum laude. Specialized in human-computer interaction and
+            web technologies. Senior capstone: accessible e-learning platform.
+          </li>
+        </ol>
+      </section>
     </main>
 
     <footer>
-        <p>© 2026 okoyo13. All rights reserved.</p>
+      <p>© 2026 okoyo13. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
