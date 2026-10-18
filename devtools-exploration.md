@@ -54,4 +54,4 @@
  - Confirm password
  - Accept terms and conditions.
 
-3.[Betika Registration Form] (Betika-screenshot.png)
+3.[Betika Registration Form](images/Betika-screenshot.png)
