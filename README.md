@@ -47,4 +47,4 @@ These challenges helped me improve my HTML structure, CSS layout skills, file or
 
 [Why Semantic HTML Matters: Lessons from My Accessibility Audit](https://dev.to/okoyo13/why-semantic-html-matters-lessons-from-my-accessibility-audit-46f2)
 
-Collaboration test: This change was made in the cloned repository.
+
