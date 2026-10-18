@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 - Blog Post Layout</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: white;
+        }
+
+        h1, h2 {
+            color: #222;
+        }
+
+        .metadata {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+
+        .related-posts {
+            border-top: 1px solid #ddd;
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+
+        .related-posts a {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>Why Learning HTML Is Important</h1>
+
+            <p class="metadata">
+                Published on <time datetime="2026-10-18">October 18, 2026</time>
+                by <span>Rodricks Okoyo</span>
+            </p>
+        </header>
+
+        <img
+            class="featured-image"
+            src="https://placehold.co/800x350?text=Learning+HTML"
+            alt="Placeholder featured image about learning HTML"
+        >
+
+        <section>
+            <h2>Introduction</h2>
+            <p>
+                HTML stands for HyperText Markup Language. It is the standard
+                language used to structure content on webpages.
+            </p>
+            <p>
+                Learning HTML is a great first step for anyone who wants to
+                understand how websites are built.
+            </p>
+        </section>
+
+        <section>
+            <h2>Building a Strong Foundation</h2>
+            <p>
+                HTML provides elements such as headings, paragraphs, images,
+                links, and lists. These elements help organize information
+                so visitors can understand a webpage easily.
+            </p>
+        </section>
+
+        <section>
+            <h2>What's Next?</h2>
+            <p>
+                After learning HTML, you can study CSS to style your pages
+                and JavaScript to make them interactive.
+            </p>
+        </section>
+
+        <section class="related-posts">
+            <h2>Related Posts</h2>
+            <ul>
+                <li><a href="day-1.html">Exploring Useful HTML Tags</a></li>
+                <li><a href="day-2.html">Creating a Navigation Menu</a></li>
+                <li><a href="day-4.html">Building a Photo Gallery</a></li>
+            </ul>
+        </section>
+    </article>
+</body>
+</html>
